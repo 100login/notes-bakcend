@@ -39,6 +39,8 @@ app.use(requestLogger)
 
 app.use(express.json())
 
+app.use(express.static('build'))
+
 const generateId = () => {
   const maxId = notes.length > 0
     ? Math.max(...notes.map(n => n.id))
@@ -98,8 +100,11 @@ const unknownEndpoint = (request, response) => {
 
 app.use(unknownEndpoint)
 
-const PORT = process.env.PORT;
-if (!PORT) PORT = 3001
+const PORT = 3001
+
+if (process.env.PORT){
+  const PORT = process.env.PORT;
+}
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
