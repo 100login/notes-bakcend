@@ -15,9 +15,12 @@
   "author": "Leandro Marques",
   "license": "ISC",
   "dependencies": {
+    "-": "0.0.1",
+    "cli": "^1.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "heroku": "^7.42.13",
     "mongoose": "^5.10.0",
     "morgan": "^1.10.0",
     "static": "^2.0.0"
